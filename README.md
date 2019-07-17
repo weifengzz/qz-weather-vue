@@ -38,3 +38,31 @@ or
 ```
     http://localhost:9002/
 ```
+
+### axios跨域问题
+* 添加 @nuxtjs/axios，@nuxtjs/proxy 依赖库
+```
+    npm install @nuxtjs/axios @nuxtjs/proxy --dev
+
+```
+* 在nuxt.config.js文件中配置
+
+```
+    modules: [
+      '@nuxtjs/axios',
+      '@nuxtjs/proxy'
+    ],
+    axios: {
+      proxy: true
+    },
+    proxy: {
+      '/api': {
+        target: 'http://t.weather.sojson.com/api/weather/city/',
+        pathRewrite: {
+          '^/api' : '/'
+        }
+      }
+    }
+```
+
+* [详情请参考](https://zh.nuxtjs.org/faq/http-proxy/)
