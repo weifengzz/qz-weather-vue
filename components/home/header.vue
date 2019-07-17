@@ -21,9 +21,3 @@ export default {
   }
 }
 </script>
-
-
-<style>
-  /* 导入样式 */
-  @import url('../../css');
-</style>

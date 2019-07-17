@@ -14,6 +14,8 @@ body {
   background-color: #6da0cd;
   margin: 0 auto;
   margin-top: 10%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* 头部样式 */
@@ -53,8 +55,10 @@ body {
 
 /* 详情 */
 #detail {
-  margin-top: 60px;
-  padding: 10px;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
   display: flex;
   flex-direction: row;
 }
@@ -115,4 +119,44 @@ body {
   font-size: 16px;
   color: white;
   margin-top: 20px;
+}
+
+/* 列表 */
+#list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+/* 列表item */
+.item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+/* item通用文字样式 */
+.item-common-text {
+  font-size: 16px;
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* item中间图标 */
+.item-center {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+/* item图片 */
+.item-img {
+  height: 30px;
+  width: 30px;
 }
