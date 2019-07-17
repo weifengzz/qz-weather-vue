@@ -11,7 +11,7 @@ body {
 #content {
   height: 640px;
   width: 360px;
-  background-color: #6ea0cd;
+  background-color: #6da0cd;
   margin: 0 auto;
   margin-top: 10%;
 }
@@ -49,4 +49,70 @@ body {
 .header-date-text {
   font-size: 14px;
   color: white;
+}
+
+/* 详情 */
+#detail {
+  margin-top: 60px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+/* 详情左边界面 */
+.detail-left {
+  flex: 3;
+  height: 200px;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 详情图片 */
+.detail-img {
+  width: 130px;
+  height: 130px;
+}
+
+/* 详情右边界面 */
+.detail-right {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+}
+
+/* 详情右边，左边界面 */
+.detail-right-left {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* 温度文字 */
+.temperature-text {
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+}
+
+/* 天气文字 */
+.weather-text {
+  font-size: 16px;
+  color: white;
+}
+
+/* 发布日期 */
+.release-time-text {
+  font-size: 14px;
+  color: white;
+  margin-top: 10px;
+}
+
+/* 温度单位 */
+.unit-text {
+  font-size: 16px;
+  color: white;
+  margin-top: 20px;
 }
