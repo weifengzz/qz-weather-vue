@@ -36,6 +36,7 @@ export default {
     };
   },
   // async asyncData({ params }) {
+  //   // 服务端数据请求
   //   return axios
   //     .get("http://t.weather.sojson.com/api/weather/city/101120602")
   //     .then(res => {
@@ -54,23 +55,47 @@ export default {
   //     });
   // },
   mounted() {
+    // 请求数据
     this.getList()
   },
   methods: {
-    getList() {
-      axios
-      .get("api/101120602")
-      .then(res => {
-        console.log("r", res.data);
-        this.data = res.data
+    //// 第一种数据请求方式（promise）
+    // getList() {
+    //  if (!this.loading || this.fail) {
+    //    this.loading = true
+    //    this.fail = false
+    //  }
+    //  axios
+    //   .get("api/101120602")
+    //   .then(res => {
+    //     console.log("r", res.data);
+    //     this.data = res.data
+    //     this.loading = false
+    //     this.fail = false
+    //   })
+    //   .catch(e => {
+    //     this.fail = true
+    //     this.data = null
+    //     this.loading = false
+    //   });
+    // }
+    // 数据请求的第二种写法（async/await）,参考ES7新特性
+    async getList() {
+      if (!this.loading || this.fail) {
+        this.loading = true
+        this.fail = false
+      }
+      try {
+        const result = await axios.get("api/101120602")
+        this.data = result.data
         this.loading = false
         this.fail = false
-      })
-      .catch(e => {
+        console.log('result', result)
+      } catch (e) {
         this.fail = true
         this.data = null
         this.loading = false
-      });
+      }
     }
   },
   // 引用组件
