@@ -4,11 +4,13 @@
   "description": "青州天气vue版本",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nuxt"
   },
   "author": "koohead",
   "license": "ISC",
   "dependencies": {
+    "moment": "^2.24.0",
     "nuxt": "^2.8.1",
     "vue": "^2.6.10",
     "vue-loader": "^15.7.0",

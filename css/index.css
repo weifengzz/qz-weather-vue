@@ -1,0 +1,52 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: black;
+}
+
+/* 内容div样式 */
+#content {
+  height: 640px;
+  width: 360px;
+  background-color: #6ea0cd;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+/* 头部样式 */
+.header {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* 头部文字样式 */
+.header-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+/* 切换城市样式 */
+.change-city-text {
+  font-size: 10px;
+  color: #f2f2f2;
+  position: absolute;
+  right: 10px;
+  top: 25px;
+}
+
+/* 头部时间 */
+.header-date {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* 头部时间文字 */
+.header-date-text {
+  font-size: 14px;
+  color: white;
+}
