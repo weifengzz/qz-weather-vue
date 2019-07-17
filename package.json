@@ -7,5 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "koohead",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "nuxt": "^2.8.1",
+    "vue": "^2.6.10",
+    "vue-loader": "^15.7.0",
+    "vue-router": "^3.0.7",
+    "vue-server-renderer": "^2.6.10",
+    "vue-style-loader": "^4.1.2"
+  }
 }
