@@ -145,6 +145,12 @@ body {
   flex-direction: column;
 }
 
+/* 列表外包组件样式 */
+.q-item-container {
+  display: flex;
+  flex-direction: column;
+}
+
 /* 列表item */
 .q-item {
   padding-top: 15px;

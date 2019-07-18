@@ -1,57 +1,42 @@
 <template>
   <div id="q-list">
-    <div class="q-item">
-      <span class="q-item-common-text">05-07</span>
-      <span class="q-item-common-text">星期二</span>
-      <div class="q-item-center">
-        <img class="q-item-img" src="../../assets/images/cloudy3.png" />
+    <div v-for="(val,key) in listdata" :key="key" class='q-item-container'>
+      <div class="q-item">
+        <span class="q-item-common-text">{{val.ymd}}</span>
+        <span class="q-item-common-text">{{val.week}}</span>
+        <div class="q-item-center">
+          <img class="q-item-img" src="../../assets/images/cloudy3.png" />
+        </div>
+        <span class="q-item-common-text">{{val.low.split(' ')[1]}}</span>
+        <span class="q-item-common-text">/</span>
+        <span class="q-item-common-text">{{val.high.split(' ')[1]}}</span>
       </div>
-      <span class="q-item-common-text">15.0℃</span>
-      <span class="q-item-common-text">/</span>
-      <span class="q-item-common-text">40.0℃</span>
-    </div>
-    <spliteLine />
-    <div class="q-item">
-      <span class="q-item-common-text">05-07</span>
-      <span class="q-item-common-text">星期二</span>
-      <div class="q-item-center">
-        <img class="q-item-img" src="../../assets/images/cloudy3.png" />
-      </div>
-      <span class="q-item-common-text">15.0℃</span>
-      <span class="q-item-common-text">/</span>
-      <span class="q-item-common-text">40.0℃</span>
-    </div>
-    <spliteLine />
-    <div class="q-item">
-      <span class="q-item-common-text">05-07</span>
-      <span class="q-item-common-text">星期二</span>
-      <div class="q-item-center">
-        <img class="q-item-img" src="../../assets/images/cloudy3.png" />
-      </div>
-      <span class="q-item-common-text">15.0℃</span>
-      <span class="q-item-common-text">/</span>
-      <span class="q-item-common-text">40.0℃</span>
-    </div>
-    <spliteLine />
-    <div class="q-item">
-      <span class="q-item-common-text">05-07</span>
-      <span class="q-item-common-text">星期二</span>
-      <div class="q-item-center">
-        <img class="q-item-img" src="../../assets/images/cloudy3.png" />
-      </div>
-      <span class="q-item-common-text">15.0℃</span>
-      <span class="q-item-common-text">/</span>
-      <span class="q-item-common-text">40.0℃</span>
+      <!-- 分割线 -->
+      <spliteLine />
     </div>
   </div>
 </template>
 
 <script>
-import spliteLine from '../common/splite_line'
+
+import spliteLine from '../common/splite_line' // 导入分割线
+import moment from 'moment'
+
 export default {
+  // 获取props
+  props: [
+    'listdata'
+  ],
   components: {
     spliteLine
+  },
+  computed: {
+    // 列表日期格式化
+    formatDate: () => {
+      return (ymd) => {
+        return `${ymd.split('-')[1]}-${ymd.split('-')[2]}`
+      }
+    }
   }
 }
 </script>
-

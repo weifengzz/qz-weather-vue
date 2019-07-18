@@ -16,7 +16,7 @@
   <div v-else id="q-content">
     <header-top></header-top>
     <detail></detail>
-    <list></list>
+    <list :listdata="filterListData(data.data.forecast)"></list>
   </div>
 </template>
 
@@ -37,6 +37,23 @@ export default {
       fail: false, // 失败
       data: null // 界面数据
     };
+  },
+  computed: {
+    /**
+     * 数据筛选
+     * 
+     * 数据格式
+     * [{"date":"19","sunrise":"05:00","high":"高温 30.0℃","low":"低温 24.0℃","sunset":"19:23","aqi":214,"ymd":"2019-07-19","week":"星期五","fx":"南风","fl":"3-4级","type":"雷阵雨","notice":"带好雨具，别在树下躲雨"},{"date":"20","sunrise":"05:01","high":"高温 33.0℃","low":"低温 25.0℃","sunset":"19:23","aqi":349,"ymd":"2019-07-20","week":"星期六","fx":"南风","fl":"3-4级","type":"雷阵雨","notice":"带好雨具，别在树下躲雨"},{"date":"21","sunrise":"05:02","high":"高温 35.0℃","low":"低温 26.0℃","sunset":"19:22","aqi":275,"ymd":"2019-07-21","week":"星期日","fx":"南风","fl":"3-4级","type":"多云","notice":"阴晴之间，谨防紫外线侵扰"},{"date":"22","sunrise":"05:03","high":"高温 35.0℃","low":"低温 29.0℃","sunset":"19:21","aqi":227,"ymd":"2019-07-22","week":"星期一","fx":"南风","fl":"3-4级","type":"阴","notice":"不要被阴云遮挡住好心情"},{"date":"23","sunrise":"05:03","high":"高温 36.0℃","low":"低温 27.0℃","sunset":"19:21","aqi":317,"ymd":"2019-07-23","week":"星期二","fx":"南风","fl":"3-4级","type":"雷阵雨","notice":"带好雨具，别在树下躲雨"},{"date":"24","sunrise":"05:04","high":"高温 36.0℃","low":"低温 29.0℃","sunset":"19:20","ymd":"2019-07-24","week":"星期三","fx":"北风","fl":"3-4级","type":"雷阵雨","notice":"带好雨具，别在树下躲雨"}]
+     */
+    filterListData: () => {
+      return lists => {
+        let data = []
+        for (let i = 1; i < 7; i++) {
+          data.push(lists[i])
+        }
+        return data
+      }
+    }
   },
   // async asyncData({ params }) {
   //   // 服务端数据请求
@@ -93,7 +110,7 @@ export default {
         this.data = result.data
         this.loading = false
         this.fail = false
-        console.log('result', result)
+        console.log('result', result.data)
       } catch (e) {
         this.fail = true
         this.data = null

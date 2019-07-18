@@ -111,3 +111,25 @@ export default {
   ...
 }
 ```
+
+## vue组件 : 符号的作用
+
+* :是v-bind的缩写，是为了动态绑定数据。
+
+```
+  <!-- 完整语法 -->
+  <a v-bind:href="url">...</a>
+
+  <!-- 缩写 -->
+  <a :href="url">...</a>
+
+```
+
+## vue中 @ 符号的作用
+* @是v-on的缩写。
+
+<!-- 完整语法 -->
+<a v-on:click="doSomething">...</a>
+
+<!-- 缩写 -->
+<a @click="doSomething">...</a>
