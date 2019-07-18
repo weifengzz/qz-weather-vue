@@ -1,5 +1,6 @@
 <template>
   <div id="q-list">
+    <!-- 使用for循环的时候需要添加:key="key" -->
     <div v-for="(val,key) in listdata" :key="key" class='q-item-container'>
       <div class="q-item">
         <span class="q-item-common-text">{{val.ymd}}</span>

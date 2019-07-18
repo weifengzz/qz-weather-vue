@@ -13,6 +13,11 @@
 import moment from 'moment'
 
 export default {
+  /**
+   * data() {} 是vue简写方法
+   * 
+   * 等同：data: function() {}
+   */
   data() {
     return {
       date: `${moment().format('MM')}月${moment().format('DD')}日`,

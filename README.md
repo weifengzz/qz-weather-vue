@@ -128,8 +128,10 @@ export default {
 ## vue中 @ 符号的作用
 * @是v-on的缩写。
 
+```
 <!-- 完整语法 -->
 <a v-on:click="doSomething">...</a>
 
 <!-- 缩写 -->
 <a @click="doSomething">...</a>
+```

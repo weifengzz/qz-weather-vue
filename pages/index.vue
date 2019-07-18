@@ -15,7 +15,8 @@
   <!-- 显示主界面 -->
   <div v-else id="q-content">
     <header-top></header-top>
-    <detail></detail>
+    <detail v-bind:detaildata="data" ></detail>
+    <!-- :是v-bind的缩写 -->
     <list :listdata="filterListData(data.data.forecast)"></list>
   </div>
 </template>
@@ -47,11 +48,11 @@ export default {
      */
     filterListData: () => {
       return lists => {
-        let data = []
+        let ldata = []
         for (let i = 1; i < 7; i++) {
-          data.push(lists[i])
+          ldata.push(lists[i])
         }
-        return data
+        return ldata
       }
     }
   },
@@ -106,6 +107,7 @@ export default {
         this.fail = false
       }
       try {
+        // 网络请求需修改请求名称
         const result = await axios.get("api/101120602")
         this.data = result.data
         this.loading = false
