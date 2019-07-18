@@ -30,6 +30,8 @@ import detail from "../components/home/detail.vue";
 import list from "../components/home/list";
 // 网络请求
 import axios from "axios";
+// 导入vuex状态管理
+import { mapState } from 'vuex'
 
 export default {
   data() {
@@ -54,7 +56,10 @@ export default {
         }
         return ldata
       }
-    }
+    },
+    ...mapState({
+      selectedCity: state => state.selectedCity
+    })
   },
   // async asyncData({ params }) {
   //   // 服务端数据请求
@@ -108,7 +113,7 @@ export default {
       }
       try {
         // 网络请求需修改请求名称
-        const result = await axios.get("api/101120602")
+        const result = await axios.get("api/" + this.selectedCity.number)
         this.data = result.data
         this.loading = false
         this.fail = false

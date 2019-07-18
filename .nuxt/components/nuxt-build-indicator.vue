@@ -1,6 +1,6 @@
 <template>
   <transition appear>
-    <div class="q-nuxt__build_indicator" v-if="building">
+    <div class="nuxt__build_indicator" v-if="building">
       <svg viewBox="0 0 96 72" version="1" xmlns="http://www.w3.org/2000/svg">
         <g fill="none" fill-rule="evenodd">
           <path d="M6 66h23l1-3 21-37L40 6 6 66zM79 66h11L62 17l-5 9 22 37v3zM54 31L35 66h38z"/>

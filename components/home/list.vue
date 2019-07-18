@@ -20,7 +20,7 @@
 
 <script>
 
-import spliteLine from '../common/splite_line' // 导入分割线
+import spliteLine from '../common/SpliteLine' // 导入分割线
 import moment from 'moment'
 
 export default {
