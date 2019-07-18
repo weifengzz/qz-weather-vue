@@ -30,6 +30,13 @@
 
 ### 运行项目
 
+* clone项目或者直接下载压缩包
+
+```
+git clone https://github.com/weifengzz/qz-weather-vue.git
+
+```
+
 * 安装依赖
 
 ```
