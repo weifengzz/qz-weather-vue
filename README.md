@@ -66,3 +66,47 @@ or
 ```
 
 * [详情请参考](https://zh.nuxtjs.org/faq/http-proxy/)
+
+### 计算属性 computed
+
+* 例1(无参数)：
+
+```
+...
+<p class="release-time-text">{{ releaseTime }} 发布</p>
+....
+
+export default {
+  ...
+  computed: {
+    // 使用计算属性，获取发布时间
+    releaseTime: () => {
+      return moment().format('hh:mm:ss')
+    }
+  }
+  ...
+}
+
+```
+
+* 例2（有参数）
+
+```
+...
+<p class="release-time-text">{{ releaseTime('hh:mm:ss') }} 发布</p>
+
+....
+
+export default {
+  ...
+  computed: {
+    // 使用计算属性，获取发布时间
+    releaseTime: () => {
+      return  (format) => {
+        return moment().format(format)
+      }
+    }
+  }
+  ...
+}
+```

@@ -1,15 +1,18 @@
 <template>
+  <!-- 正在加载 -->
   <div v-if="loading" id="content">
     <div class="loading">
       <span class="loading-error-text">loading...</span>
     </div>
   </div>
+  <!-- 加载失败 -->
   <div v-else-if="fail" id="content">
     <div class="loading">
       <span class="loading-error-text">网络异常，</span>
       <a class="loading-error-text">点击重新加载</a>
     </div>
   </div>
+  <!-- 显示主界面 -->
   <div v-else id="content">
     <header-top></header-top>
     <detail></detail>
