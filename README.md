@@ -4,6 +4,7 @@
 * vue学习整理
 * 未严格按照Vue[风格指南](https://cn.vuejs.org/v2/style-guide/)
 * 旨在学习与交流vue语法以及基本入门
+* 由于对css了解不深入，使用了flex-box布局，界面样式可忽略
 
 ### 功能
 * 基于nuxt环境项目搭建
@@ -164,3 +165,6 @@ export default {
 * 参考资料：[5分钟带你入门vuex（vue状态管理）](https://baijiahao.baidu.com/s?id=1618794879569468435&wfr=spider&for=pc)
 * 官方参考资料: [vuex](https://vuex.vuejs.org/zh/installation.html)
 * 如果想深入了解，请参考：[redux基本原理](https://www.redux.org.cn/)
+
+
+![img](/img.jpg)
