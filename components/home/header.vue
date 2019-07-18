@@ -1,9 +1,9 @@
 <template>
-  <div class='header'>
-    <a class='header-text'>青州天气</a>
-    <a class='change-city-text'>[切换城市]</a>
-    <div class="header-date">
-      <a class="header-date-text">{{`${date} 周${week}`}}</a>
+  <div class='q-header'>
+    <a class='q-header-text'>青州天气</a>
+    <a class='q-change-city-text'>[切换城市]</a>
+    <div class="q-header-date">
+      <a class="q-header-date-text">{{`${date} 周${week}`}}</a>
     </div>
   </div>
 </template>

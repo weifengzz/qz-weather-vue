@@ -1,9 +1,9 @@
 <template>
-  <div id="splite-line" />
+  <div id="q-splite-line" />
 </template>
 
 <style>
-  #splite-line {
+  #q-splite-line {
     height: 0px;
     border-top: 1px solid white;
     transform-origin: 0 0;

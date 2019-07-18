@@ -1,19 +1,19 @@
 <template>
   <!-- 正在加载 -->
-  <div v-if="loading" id="content">
-    <div class="loading">
-      <span class="loading-error-text">loading...</span>
+  <div v-if="loading" id="q-content">
+    <div class="q-loading">
+      <span class="q-loading-error-text">loading...</span>
     </div>
   </div>
   <!-- 加载失败 -->
-  <div v-else-if="fail" id="content">
-    <div class="loading">
-      <span class="loading-error-text">网络异常，</span>
-      <a class="loading-error-text">点击重新加载</a>
+  <div v-else-if="fail" id="q-content">
+    <div class="q-loading">
+      <span class="q-loading-error-text">网络异常，</span>
+      <a class="q-loading-error-text">点击重新加载</a>
     </div>
   </div>
   <!-- 显示主界面 -->
-  <div v-else id="content">
+  <div v-else id="q-content">
     <header-top></header-top>
     <detail></detail>
     <list></list>
@@ -112,6 +112,6 @@ export default {
 
 
 <style>
-/* 导入样式 */
+/* 导入样式，使用<style scoped> 样式只作用在本模块 */
 @import url("../css/index.css");
 </style>

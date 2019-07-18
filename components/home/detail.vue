@@ -1,16 +1,16 @@
 <template>
-  <div id="detail">
-    <div class="detail-left">
-      <img class="detail-img" src='../../assets/images/cloudy3.png' />
+  <div id="q-detail">
+    <div class="q-detail-left">
+      <img class="q-detail-img" src='../../assets/images/cloudy3.png' />
     </div>
-    <div class="detail-right">
-      <div class="detail-right-left">
-        <p class="temperature-text">36</p>
-        <p class="weather-text">晴</p>
+    <div class="q-detail-right">
+      <div class="q-detail-right-left">
+        <p class="q-temperature-text">36</p>
+        <p class="q-weather-text">晴</p>
         <!-- 使用计算属性获取发布时间 -->
-        <p class="release-time-text">{{ releaseTime }} 发布</p>
+        <p class="q-release-time-text">{{ releaseTime }} 发布</p>
       </div>
-      <p class="unit-text">℃</p>
+      <p class="q-unit-text">℃</p>
     </div>
   </div>
 </template>

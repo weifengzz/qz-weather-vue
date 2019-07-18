@@ -5,21 +5,24 @@
 
 body {
   background-color: black;
+  height: 100%;
+  width: 100%;
 }
 
 /* 内容div样式 */
-#content {
-  height: 640px;
-  width: 360px;
+#q-content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   background-color: #6da0cd;
-  margin: 0 auto;
-  margin-top: 10%;
   display: flex;
   flex-direction: column;
 }
 
 /* 正在加载界面 */
-.loading {
+.q-loading {
   display: flex;
   flex: 1;
   align-items: center;
@@ -27,27 +30,27 @@ body {
 }
 
 /* 正在加载文字 */
-.loading-error-text {
+.q-loading-error-text {
   font-size: 16px;
   color: white;
 }
 
 /* 头部样式 */
-.header {
+.q-header {
   padding: 20px;
   text-align: center;
   position: relative;
 }
 
 /* 头部文字样式 */
-.header-text {
+.q-header-text {
   font-size: 18px;
   font-weight: bold;
   color: white;
 }
 
 /* 切换城市样式 */
-.change-city-text {
+.q-change-city-text {
   font-size: 10px;
   color: #f2f2f2;
   position: absolute;
@@ -56,19 +59,19 @@ body {
 }
 
 /* 头部时间 */
-.header-date {
+.q-header-date {
   margin-top: 10px;
   text-align: center;
 }
 
 /* 头部时间文字 */
-.header-date-text {
+.q-header-date-text {
   font-size: 14px;
   color: white;
 }
 
 /* 详情 */
-#detail {
+#q-detail {
   flex: 1;
   align-items: center;
   justify-content: center;
@@ -78,8 +81,8 @@ body {
 }
 
 /* 详情左边界面 */
-.detail-left {
-  flex: 3;
+.q-detail-left {
+  flex: 1;
   height: 200px;
   float: left;
   display: flex;
@@ -88,62 +91,62 @@ body {
 }
 
 /* 详情图片 */
-.detail-img {
+.q-detail-img {
   width: 130px;
   height: 130px;
 }
 
 /* 详情右边界面 */
-.detail-right {
-  flex: 2;
+.q-detail-right {
+  flex: 1;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 /* 详情右边，左边界面 */
-.detail-right-left {
+.q-detail-right-left {
   display: flex;
-  flex: 1;
   align-items: center;
   flex-direction: column;
 }
 
 /* 温度文字 */
-.temperature-text {
+.q-temperature-text {
   font-size: 80px;
   font-weight: bold;
   color: white;
 }
 
 /* 天气文字 */
-.weather-text {
+.q-weather-text {
   font-size: 16px;
   color: white;
 }
 
 /* 发布日期 */
-.release-time-text {
+.q-release-time-text {
   font-size: 14px;
   color: white;
   margin-top: 10px;
 }
 
 /* 温度单位 */
-.unit-text {
+.q-unit-text {
   font-size: 16px;
   color: white;
   margin-top: 20px;
 }
 
 /* 列表 */
-#list {
+#q-list {
   display: flex;
   width: 100%;
   flex-direction: column;
 }
 
 /* 列表item */
-.item {
+.q-item {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 10px;
@@ -154,7 +157,7 @@ body {
 }
 
 /* item通用文字样式 */
-.item-common-text {
+.q-item-common-text {
   font-size: 16px;
   color: white;
   margin-left: 5px;
@@ -162,7 +165,7 @@ body {
 }
 
 /* item中间图标 */
-.item-center {
+.q-item-center {
   flex: 1;
   align-items: center;
   justify-content: center;
@@ -170,7 +173,7 @@ body {
 }
 
 /* item图片 */
-.item-img {
+.q-item-img {
   height: 30px;
   width: 30px;
 }

@@ -68,12 +68,13 @@ or
 * [详情请参考](https://zh.nuxtjs.org/faq/http-proxy/)
 
 ### 计算属性 computed
+* [计算属性文档](https://cn.vuejs.org/v2/guide/computed.html)
 
 * 例1(无参数)：
 
 ```
 ...
-<p class="release-time-text">{{ releaseTime }} 发布</p>
+<p class="q-release-time-text">{{ releaseTime }} 发布</p>
 ....
 
 export default {
@@ -93,7 +94,7 @@ export default {
 
 ```
 ...
-<p class="release-time-text">{{ releaseTime('hh:mm:ss') }} 发布</p>
+<p class="q-release-time-text">{{ releaseTime('hh:mm:ss') }} 发布</p>
 
 ....
 
