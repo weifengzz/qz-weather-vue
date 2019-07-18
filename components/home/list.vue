@@ -13,7 +13,7 @@
         <span class="q-item-common-text">{{val.high.split(' ')[1]}}</span>
       </div>
       <!-- 分割线 -->
-      <spliteLine />
+      <splite-line />
     </div>
   </div>
 </template>
@@ -25,9 +25,9 @@ import moment from 'moment'
 
 export default {
   // 获取props
-  props: [
-    'listdata'
-  ],
+  props: {
+    listdata: Array
+  },
   components: {
     spliteLine
   },

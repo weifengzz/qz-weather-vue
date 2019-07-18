@@ -20,8 +20,8 @@ export default {
    */
   data() {
     return {
-      date: `${moment().format('MM')}月${moment().format('DD')}日`,
-      week: moment().weekday()
+      date: `${moment().format('MM')}月${moment().format('DD')}日`, // moment 获取月日
+      week: moment().weekday() // moment获取星期
     }
   }
 }

@@ -112,7 +112,6 @@ export default {
         this.data = result.data
         this.loading = false
         this.fail = false
-        console.log('result', result.data)
       } catch (e) {
         this.fail = true
         this.data = null

@@ -17,9 +17,12 @@
 
 <script>
 export default {
-  props: [
-    'detaildata'
-  ],
+  // 获取props数据
+  // 注意！：非开发原型系统时不建议使用 props['detaildata'] 写法
+  // 参考props语法规范，https://cn.vuejs.org/v2/style-guide/#Prop-%E5%AE%9A%E4%B9%89-%E5%BF%85%E8%A6%81
+  props: {
+    detaildata: Object
+  },
   computed: {
     // 使用计算属性，获取发布时间
     releaseTime: () => {
