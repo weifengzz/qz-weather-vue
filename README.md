@@ -135,3 +135,10 @@ export default {
 <!-- 缩写 -->
 <a @click="doSomething">...</a>
 ```
+
+## vuex的使用
+
+* 说明：vuex封装的比较好相对于redux简单
+* 参考资料：[5分钟带你入门vuex（vue状态管理）](https://baijiahao.baidu.com/s?id=1618794879569468435&wfr=spider&for=pc)
+* 官方参考资料: [vuex](https://vuex.vuejs.org/zh/installation.html)
+* 如果想深入了解，请参考：[redux基本原理](https://www.redux.org.cn/)
