@@ -1,5 +1,18 @@
 ## 青州天气vue版本
 
+### 说明
+* vue学习整理
+* 未严格按照Vue[风格指南](https://cn.vuejs.org/v2/style-guide/)
+* 旨在学习与交流vue语法以及基本入门
+
+### 功能
+* 基于nuxt环境搭建
+* 基本组件封装
+* 组件传值（props）
+* 跨域问题解决方案
+* router（页面跳转动画等）
+* 子父组件互调用(demo暂未涉及)
+
 ### 参考文档
 * [vue](https://cn.vuejs.org/v2/guide/)
 * [nuxt](https://zh.nuxtjs.org/guide)
@@ -112,7 +125,7 @@ export default {
 }
 ```
 
-## vue组件 : 符号的作用
+### vue组件 : 符号的作用
 
 * :是v-bind的缩写，是为了动态绑定数据。
 
@@ -125,7 +138,7 @@ export default {
 
 ```
 
-## vue中 @ 符号的作用
+### vue中 @ 符号的作用
 * @是v-on的缩写。
 
 ```
@@ -136,7 +149,7 @@ export default {
 <a @click="doSomething">...</a>
 ```
 
-## vuex的使用
+### vuex的使用
 
 * 说明：vuex封装的比较好相对于redux简单
 * 参考资料：[5分钟带你入门vuex（vue状态管理）](https://baijiahao.baidu.com/s?id=1618794879569468435&wfr=spider&for=pc)
