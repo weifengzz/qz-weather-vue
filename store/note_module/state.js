@@ -13,7 +13,7 @@ const state = () => {
       },
       {
         id: "2",
-        title: "hello vue",
+        title: "Hello vue",
         desc: "Learn how to build a vue application.",
         finish: false // 是否完成
       },
@@ -21,7 +21,7 @@ const state = () => {
         id: "3",
         title: "How Vuex",
         desc: "Learn how to use Vuex in a vue application.",
-        finish: false // 是否完成
+        finish: true // 是否完成
       }
     ]
   }
