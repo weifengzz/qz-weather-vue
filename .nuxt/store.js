@@ -24,6 +24,7 @@ void (function updateModules() {
   resolveStoreModules(require('../store/state.js'), 'state.js')
   resolveStoreModules(require('../store/types.js'), 'types.js')
   resolveStoreModules(require('../store/note_module/index.js'), 'note_module/index.js')
+  resolveStoreModules(require('../store/note_module/actions.js'), 'note_module/actions.js')
   resolveStoreModules(require('../store/note_module/getters.js'), 'note_module/getters.js')
   resolveStoreModules(require('../store/note_module/mutations.js'), 'note_module/mutations.js')
   resolveStoreModules(require('../store/note_module/state.js'), 'note_module/state.js')
@@ -41,6 +42,7 @@ void (function updateModules() {
       '../store/state.js',
       '../store/types.js',
       '../store/note_module/index.js',
+      '../store/note_module/actions.js',
       '../store/note_module/getters.js',
       '../store/note_module/mutations.js',
       '../store/note_module/state.js',

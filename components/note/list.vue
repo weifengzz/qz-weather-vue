@@ -15,7 +15,11 @@
 
 <script>
   // 导入vuex状态管理
-  import { mapState } from 'vuex'
+  import { createNamespacedHelpers } from 'vuex'
+  const { mapState, mapActions } = createNamespacedHelpers('note_module')
+
+  // 导入Types
+  import { CHANGE_FINISH_STATE } from '../../store/note_module/types'
 
   export default {
     data() {
@@ -36,13 +40,16 @@
     },
     computed: {
       ...mapState({
-        todoListData: state => state.note_module.todoListData,
+        todoListData: state => state.todoListData,
       })
     },
     methods: {
       handleClick(val) {
-        console.log('cbData', val)
-      }
+        this[CHANGE_FINISH_STATE](val)
+      },
+      ...mapActions([
+        CHANGE_FINISH_STATE
+      ])
     }
   }
 </script>
