@@ -19,6 +19,6 @@ export default {
     }
   },
   css: [
-  './css/index.css'
+  './assets/css/home.css'
   ]
 }

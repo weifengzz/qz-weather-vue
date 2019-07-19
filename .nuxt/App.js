@@ -2,7 +2,7 @@ import Vue from 'vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import '../css/index.css'
+import '../assets/css/home.css'
 
 import _6f6c098b from './layouts/default.vue'
 

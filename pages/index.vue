@@ -136,5 +136,5 @@ export default {
 
 <style>
 /* 导入样式，使用<style scoped> 样式只作用在本模块 */
-@import url("../css/index.css");
+@import url("../assets/css/home.css");
 </style>
