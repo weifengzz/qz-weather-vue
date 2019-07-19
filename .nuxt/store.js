@@ -19,10 +19,15 @@ void (function updateModules() {
   store.modules = store.modules || {}
 
   resolveStoreModules(require('../store/actions.js'), 'actions.js')
-  resolveStoreModules(require('../store/getter.js'), 'getter.js')
+  resolveStoreModules(require('../store/getters.js'), 'getters.js')
   resolveStoreModules(require('../store/mutations.js'), 'mutations.js')
   resolveStoreModules(require('../store/state.js'), 'state.js')
   resolveStoreModules(require('../store/types.js'), 'types.js')
+  resolveStoreModules(require('../store/note_module/index.js'), 'note_module/index.js')
+  resolveStoreModules(require('../store/note_module/getters.js'), 'note_module/getters.js')
+  resolveStoreModules(require('../store/note_module/mutations.js'), 'note_module/mutations.js')
+  resolveStoreModules(require('../store/note_module/state.js'), 'note_module/state.js')
+  resolveStoreModules(require('../store/note_module/types.js'), 'note_module/types.js')
 
   // If the environment supports hot reloading...
 
@@ -30,11 +35,16 @@ void (function updateModules() {
     // Whenever any Vuex module is updated...
     module.hot.accept([
       '../store/actions.js',
-      '../store/getter.js',
+      '../store/getters.js',
       '../store/index.js',
       '../store/mutations.js',
       '../store/state.js',
       '../store/types.js',
+      '../store/note_module/index.js',
+      '../store/note_module/getters.js',
+      '../store/note_module/mutations.js',
+      '../store/note_module/state.js',
+      '../store/note_module/types.js',
     ], () => {
       // Update `root.modules` with the latest definitions.
       updateModules()

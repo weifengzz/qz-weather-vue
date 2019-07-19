@@ -1,7 +1,8 @@
 <template>
   <div class='q-header'>
     <a class='q-header-text'>{{selectedCity.name}}</a>
-    <router-link class='q-change-city-text' :to="{ path: 'select-city' }">[切换城市]</router-link>
+    <router-link class='q-change-city-text' :to="{ path: 'select-city' }">Vuex初探-切换城市</router-link>
+    <router-link class='q-note-book-text' :to="{ path: 'note-book/todo-list' }">Vuex深入-记事本</router-link>
     <div class="q-header-date">
       <a class="q-header-date-text">{{`${date} 周${week}`}}</a>
     </div>

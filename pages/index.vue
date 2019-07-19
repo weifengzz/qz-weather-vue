@@ -1,19 +1,21 @@
 <template>
   <!-- 正在加载 -->
-  <div v-if="loading" id="q-content">
+  <!-- 动态绑定class写法 :class="{'bor':clicked==index}" -->
+  <!-- 动态绑定style写法 :class="{'bor':clicked==index}" -->
+  <div v-if="loading" id="q-content" :style="{ 'background-color': theme.color }">
     <div class="q-loading">
       <span class="q-loading-error-text">loading...</span>
     </div>
   </div>
   <!-- 加载失败 -->
-  <div v-else-if="fail" id="q-content">
+  <div v-else-if="fail" id="q-content" :style="{ 'background-color': theme.color }">
     <div class="q-loading">
       <span class="q-loading-error-text">网络异常，</span>
       <a class="q-loading-error-text">点击重新加载</a>
     </div>
   </div>
   <!-- 显示主界面 -->
-  <div v-else id="q-content">
+  <div v-else id="q-content" :style="{ 'background-color': theme.color }">
     <header-top></header-top>
     <detail v-bind:detaildata="data" ></detail>
     <!-- :是v-bind的缩写 -->
@@ -58,7 +60,8 @@ export default {
       }
     },
     ...mapState({
-      selectedCity: state => state.selectedCity
+      selectedCity: state => state.selectedCity,
+      theme: state => state.theme,
     })
   },
   // async asyncData({ params }) {

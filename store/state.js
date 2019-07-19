@@ -17,6 +17,11 @@
 
 const state = () => {
   return {
+    // 主题(只演示主题色)
+    theme: {
+      color: '#6da0cd' // 初始化主题色
+    },
+    // 选中的城市
     selectedCity: {
       name: '青州市',
       number: '101120602'

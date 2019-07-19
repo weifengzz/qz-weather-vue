@@ -159,6 +159,21 @@ export default {
 <a @click="doSomething">...</a>
 ```
 
+### 动态设置样式
+
+* 动态绑定class写法 :
+
+```
+<div :class="{'bor':clicked==index}"></div>
+```
+
+* 动态绑定style
+
+```
+  <div :style="{ 'background-color': theme.color }">
+```
+
+
 ### vuex的使用
 
 * 说明：vuex封装的比较好相对于redux简单

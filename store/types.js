@@ -6,9 +6,13 @@
  * 可以不用，其作用是为了解耦
  */
 
+// 修改主题
+const CHANGE_APP_THEME = 'changeAppTheme' 
+
 // 修改城市编码
 const CHANGE_CITY_NUMBER = 'changeCityNumber'
 
 export {
-  CHANGE_CITY_NUMBER
+  CHANGE_CITY_NUMBER,
+  CHANGE_APP_THEME
 }
