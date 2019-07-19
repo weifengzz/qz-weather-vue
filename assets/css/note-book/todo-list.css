@@ -1,0 +1,23 @@
+/*
+  todo-list样式
+  css的第二种写法(scoped)
+
+  如果你和其他开发者一起开发一个大型工程，
+  或有时引入三方 HTML/CSS (比如来自 Auth0)，
+  设置一致的作用域会确保你的样式只会运用在它们想要作用的组件上。
+  不止要使用 scoped 特性，
+  使用唯一的 class 名可以帮你确保那些三方库的 CSS 不会运用在你自己的 HTML 上。
+  比如许多工程都使用了 button、btn 或 icon class 名，
+  所以即便你不使用类似 BEM 的策略，
+  添加一个 app 专属或组件专属的前缀 (比如 ButtonClose-icon) 也可以提供很多保护。
+*/
+
+#todo-list {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+}

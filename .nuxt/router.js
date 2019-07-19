@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 
 const _2665144b = () => interopDefault(import('../pages/select-city.vue' /* webpackChunkName: "pages/select-city" */))
+const _2f9fde32 = () => interopDefault(import('../pages/note-book/todo.vue' /* webpackChunkName: "pages/note-book/todo" */))
 const _352127ee = () => interopDefault(import('../pages/note-book/todo-list.vue' /* webpackChunkName: "pages/note-book/todo-list" */))
 const _25240bc1 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -84,6 +85,10 @@ export function createRouter() {
       path: "/select-city",
       component: _2665144b,
       name: "select-city"
+    }, {
+      path: "/note-book/todo",
+      component: _2f9fde32,
+      name: "note-book-todo"
     }, {
       path: "/note-book/todo-list",
       component: _352127ee,
