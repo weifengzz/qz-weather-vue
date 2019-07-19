@@ -7,11 +7,21 @@ import state from './state'
 
 Vue.use(Vuex)
 
-const store = () => new Vuex.Store({
+/*
+  // 老版本写法现在版本不建议这么写,即将移除
+  const store = () => new Vuex.Store({
+    state,
+    getters,
+    mutations,
+    actions
+  })
+
+  export default store
+*/
+
+export {
   state,
   getters,
   mutations,
   actions
-})
-
-export default store
+}
