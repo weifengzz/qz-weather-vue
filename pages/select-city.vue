@@ -6,6 +6,9 @@
     <li>
       <a @click="back({number: '101120604', name: '临朐县'})">临朐县</a>
     </li>
+    <li>
+      <a @click="back({number: '101120602', name: '青州市'})">青州市</a>
+    </li>
   </ul>
 </template>
 

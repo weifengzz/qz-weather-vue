@@ -1,3 +1,11 @@
+/* 对于应用来说，顶级 App 组件和布局组件中的样式可以是全局的，但是其它所有组件都应该是有作用域的。
+  这条规则只和单文件组件有关。你不一定要使用 scoped 特性。设置作用域也可以通过 CSS Modules，那是一个基于 class 的类似 BEM 的策略，当然你也可以使用其它的库或约定。
+  不管怎样，对于组件库，我们应该更倾向于选用基于 class 的策略而不是 scoped 特性。
+  这让覆写内部样式更容易：使用了常人可理解的 class 名称且没有太高的选择器优先级，而且不太会导致冲突。
+  
+  参考：https://cn.vuejs.org/v2/style-guide/#%E4%B8%BA%E7%BB%84%E4%BB%B6%E6%A0%B7%E5%BC%8F%E8%AE%BE%E7%BD%AE%E4%BD%9C%E7%94%A8%E5%9F%9F-%E5%BF%85%E8%A6%81
+*/
+
 /* 跳转动画 参考：https://zh.nuxtjs.org/guide/routing */
 .page-enter-active, .page-leave-active {
   transition: opacity .3s;
@@ -118,6 +126,7 @@ body {
 
 /* 温度文字 */
 .q-temperature-text {
+  margin: 0px;
   font-size: 80px;
   font-weight: bold;
   color: white;
@@ -141,6 +150,7 @@ body {
   font-size: 16px;
   color: white;
   margin-top: 20px;
+  margin-left: 10px;
 }
 
 /* 列表 */
