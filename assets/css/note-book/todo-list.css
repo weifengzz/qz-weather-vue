@@ -12,6 +12,7 @@
   添加一个 app 专属或组件专属的前缀 (比如 ButtonClose-icon) 也可以提供很多保护。
 */
 
+/* 界面样式 */
 #todo-list {
   position: absolute;
   top: 0px;
@@ -20,4 +21,9 @@
   bottom: 0px;
   display: flex;
   flex-direction: column;
+}
+
+/* 内容 */
+.conent {
+  padding: 10px;
 }

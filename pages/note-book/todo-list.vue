@@ -1,16 +1,29 @@
 <template>
   <div id="todo-list">
     <header-top :title="'ToDoList'"></header-top>
+    <div class="conent">
+      <report></report>
+    </div>
   </div>
 </template>
 
 <script>
   // 导入header组件(不要将组件名称设置为header，header会与vue标签重复)
   import headerTop from '../../components/note/header.vue'
+  // 统计界面
+  import report from '../../components/note/report.vue'
+  // 导入vuex状态管理
+  import { mapState } from 'vuex'
 
   export default {
     components: {
-      headerTop
+      headerTop,
+      report
+    },
+    computed: {
+      ...mapState({
+        todoListData: state => state.noteModule.todoListData,
+      })
     }
   }
 </script>
