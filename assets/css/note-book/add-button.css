@@ -1,0 +1,15 @@
+#add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 200px;
+  right: 60px;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  background-color: aquamarine;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}

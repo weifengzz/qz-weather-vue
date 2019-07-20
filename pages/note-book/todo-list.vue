@@ -6,6 +6,8 @@
       <report></report>
       <!-- 列表界面 -->
       <list></list>
+      <!-- 添加按钮 -->
+      <add-button></add-button>
     </div>
   </div>
 </template>
@@ -17,6 +19,8 @@
   import report from '../../components/note/report'
   // 列表组件
   import list from '../../components/note/list'
+  // 添加按钮
+  import addButton from '../../components/note/addButton' 
   // 导入vuex状态管理
   import { mapState } from 'vuex'
 
@@ -24,7 +28,8 @@
     components: {
       headerTop,
       report,
-      list
+      list,
+      addButton
     },
     computed: {
       ...mapState({
