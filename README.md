@@ -1,5 +1,32 @@
 ## 青州天气vue版本
 
+<p align="center">
+    <img src="./img.jpg" alt="Sample"  width="280" height="500">
+    <p align="center">
+        <em>天气</em>
+    </p>
+</p>
+<p align="center">
+    <img src="./img1.jpg" alt="Sample"  width="280" height="500">
+    <p align="center">
+        <em>记事本1</em>
+    </p>
+</p>
+
+<p align="center">
+    <img src="./img2.jpg" alt="Sample"  width="280" height="500">
+    <p align="center">
+        <em>记事本2</em>
+    </p>
+</p>
+
+<p align="center">
+    <img src="./img3.jpg" alt="Sample"  width="280" height="500">
+    <p align="center">
+        <em>选择主题</em>
+    </p>
+</p>
+
 ### 说明
 * vue学习整理
 * 未严格按照Vue[风格指南](https://cn.vuejs.org/v2/style-guide/)
@@ -180,11 +207,3 @@ export default {
 * 参考资料：[5分钟带你入门vuex（vue状态管理）](https://baijiahao.baidu.com/s?id=1618794879569468435&wfr=spider&for=pc)
 * 官方参考资料: [vuex](https://vuex.vuejs.org/zh/installation.html)
 * 如果想深入了解，请参考：[redux基本原理](https://www.redux.org.cn/)
-
-
-<p align="center">
-    <img src="./img.jpg" alt="Sample"  width="140" height="250">
-    <p align="center">
-        <em>功能预览</em>
-    </p>
-</p>
