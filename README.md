@@ -182,4 +182,9 @@ export default {
 * 如果想深入了解，请参考：[redux基本原理](https://www.redux.org.cn/)
 
 
-![img](/img.jpg)
+<p align="center">
+    <img src="./img.jpg" alt="Sample"  width="140" height="250">
+    <p align="center">
+        <em>功能预览</em>
+    </p>
+</p>
