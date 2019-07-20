@@ -35,7 +35,6 @@ export default {
   },
   // 修改任务
   [EDIT_TODO](state, todo) {
-    console.log('todo', todo)
     let todoListData = state.todoListData
     let index = -1
     for (let i = 0; i < todoListData.length; i++) {
@@ -45,10 +44,8 @@ export default {
       }
     }
     if (index > -1) {
-      todoListData[index] = {
-        ...todoListData[index],
-        ...todo
-      }
+      todoListData[index].desc = todo.desc
+      todoListData[index].title = todo.title
     }
   }
 }
