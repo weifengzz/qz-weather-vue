@@ -1,13 +1,13 @@
 <template>
   <div id="todo-list">
-    <header-top :title="'ToDoList'"></header-top>
+    <header-top :title="'TodoList'"></header-top>
     <div class="conent">
       <!-- 统计 -->
       <report></report>
       <!-- 列表界面 -->
       <list></list>
       <!-- 添加按钮 -->
-      <add-button></add-button>
+      <add-button @addButtonClick="onAddButtonClick"></add-button>
     </div>
   </div>
 </template>
@@ -35,6 +35,11 @@
       ...mapState({
         todoListData: state => state.noteModule.todoListData,
       })
+    },
+    methods: {
+      onAddButtonClick() {
+        this.$router.push({path:'todo', query: { edit: false }})
+      }
     }
   }
 </script>

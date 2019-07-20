@@ -1,0 +1,33 @@
+#todo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  padding: 10
+}
+
+.theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: cadetblue;
+  margin: 10px 40px 10px 40px;
+  border-radius: 10px;
+  color: white;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  width: 60%;
+  background-color: white;
+  border-radius: 10px;
+}
