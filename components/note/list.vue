@@ -9,6 +9,12 @@
         <!-- v-model双向绑定 -->
         <input @click="handleClick(val)" id="val.id" type="checkbox" :value="val.id" v-model="checkDatas" />
       </div>
+      <div class="list-content" >
+        <div class="list-content-left">{{val.desc}}</div>
+        <div class="list-content-right">
+          <span class="change-span">Edit</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>

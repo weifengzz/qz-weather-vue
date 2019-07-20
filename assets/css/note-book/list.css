@@ -32,3 +32,31 @@
   width: 20px;
   border: 0px;
 }
+
+.list-content {
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  background-color: lightgoldenrodyellow;
+}
+
+.list-content-left {
+  flex: 1;
+  display: flex;
+}
+
+.list-content-right {
+  margin-left: 10px;
+  border: 1px solid #ddd;
+  background-color: teal;
+  padding: 5px 10px 5px 10px;
+  border-radius: 6px;
+}
+
+.change-span {
+  color: white;
+  font-size: 10px;
+}
