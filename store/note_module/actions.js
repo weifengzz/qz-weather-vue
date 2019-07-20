@@ -1,4 +1,4 @@
-import { CHANGE_FINISH_STATE, ADD_TODO } from './types'
+import { CHANGE_FINISH_STATE, ADD_TODO, DELETE_TODO } from './types'
 
 export default {
   [CHANGE_FINISH_STATE](context, selectItemVal) {
@@ -6,5 +6,8 @@ export default {
   },
   [ADD_TODO](context, todo) {
     context.commit(ADD_TODO, todo)
+  },
+  [DELETE_TODO](context, id) {
+    context.commit(DELETE_TODO, id)
   }
 }
