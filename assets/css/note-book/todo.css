@@ -30,6 +30,7 @@
   background-color: white;
   border-radius: 10px;
 }
+
 .modal-header {
   display: flex;
   flex-direction: column;
@@ -66,4 +67,37 @@
 
 .modal-color {
   margin: 20px;
+}
+
+.input-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: 'center';
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.title-input {
+  margin-left: 20px;
+  height: 20px;
+  width: 30%;
+}
+
+.desc-input {
+  margin-left: 20px;
+  height: 150px;
+  width: 30%;
+}
+
+.submit-btn {
+  background-color: cornflowerblue;
+  width: 80%;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   bottom: 200px;
   right: 60px;
   height: 60px;
