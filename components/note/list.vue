@@ -14,6 +14,9 @@
         <div class="list-content-right">
           <span class="change-span">Edit</span>
         </div>
+        <div @click="onDelete(val.id)" class="list-content-right" style="background-color: tomato">
+          <span class="change-span">Delete</span>
+        </div>
       </div>
     </div>
   </div>
@@ -25,7 +28,7 @@
   const { mapState, mapActions } = createNamespacedHelpers('note_module')
 
   // 导入Types
-  import { CHANGE_FINISH_STATE } from '../../store/note_module/types'
+  import { CHANGE_FINISH_STATE, DELETE_TODO } from '../../store/note_module/types'
 
   export default {
     data() {
@@ -50,12 +53,16 @@
       })
     },
     methods: {
+      ...mapActions([
+        CHANGE_FINISH_STATE,
+        DELETE_TODO
+      ]),
       handleClick(val) {
         this[CHANGE_FINISH_STATE](val)
       },
-      ...mapActions([
-        CHANGE_FINISH_STATE
-      ])
+      onDelete(id) {
+        this[DELETE_TODO](id)
+      }
     }
   }
 </script>
