@@ -4,7 +4,7 @@
     <a @click="showModal" class="theme">Change theme</a>
     <div class="input-content">
       <label>title:</label>
-      <input v-model="title" type="text" class="title-input" />
+      <input value="title" v-model="title" type="text" class="title-input" />
     </div>
     <div class="input-content">
       <label>desc:</label>
@@ -49,9 +49,9 @@
   // 导入Types
   import { CHANGE_APP_THEME } from '../../store/types'
   // 导入ModuleTypes
-  import { ADD_TODO } from '../../store/note_module/types'
+  import { ADD_TODO, EDIT_TODO } from '../../store/note_module/types'
   // 导入vuex相关
-  import { mapActions } from 'vuex'
+  import { mapActions, mapState } from 'vuex'
   export default {
     data() {
       return {
@@ -65,18 +65,34 @@
           'slategray'
         ],
         title: '',
-        desc: ''
+        desc: '',
+        isEdit: false
       }
     },
+    computed: {
+      ...mapState('note_module', {
+        todoListData: state => state.todoListData,
+      })
+    },
     mounted() {
-      console.log(this.$route)
+      if (this.$route.query && this.$route.query.edit) {
+        for (let todo of this.todoListData) {
+          if (todo.id === this.$route.query.id) {
+            this.isEdit = true
+            this.desc = todo.desc
+            this.title = todo.title
+            break
+          }
+        }
+      }
     },
     methods: {
       ...mapActions([
         CHANGE_APP_THEME
       ]),
       ...mapActions('note_module', [
-        ADD_TODO
+        ADD_TODO,
+        EDIT_TODO
       ]),
       showModal() {
         // 父调子组件方法
@@ -111,10 +127,18 @@
             this.$router.push({path:'/'})
             return false
         } else {
-          this[ADD_TODO]({
-            title: this.title,
-            desc: this.desc
-          })
+          if (this.isEdit) {
+            this[EDIT_TODO]({
+              id: this.$route.query.id,
+              title: this.title,
+              desc: this.desc
+            })
+          } else {
+            this[ADD_TODO]({
+              title: this.title,
+              desc: this.desc
+            })
+          }
           this.$router.back('-1')
         }
       }

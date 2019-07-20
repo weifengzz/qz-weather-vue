@@ -11,7 +11,7 @@
       </div>
       <div class="list-content">
         <div class="list-content-left">{{val.desc}}</div>
-        <div class="list-content-right">
+        <div @click="onEdit(val.id)" class="list-content-right">
           <span class="change-span">Edit</span>
         </div>
         <div @click="onDelete(val.id)" class="list-content-right" style="background-color: tomato">
@@ -62,6 +62,9 @@
       },
       onDelete(id) {
         this[DELETE_TODO](id)
+      },
+      onEdit(id) {
+        this.$router.push({path:'todo', query: { edit: true, id }})
       }
     }
   }

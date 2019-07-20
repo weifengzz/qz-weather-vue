@@ -10,6 +10,9 @@
 
   export default {
     computed: {
+      ...mapState({
+        todoListData: state => state.note_module.todoListData,
+      }),
       // 获取完成数量
       getTotalTask() {
         return this.todoListData.length
@@ -18,10 +21,7 @@
       getFinished() {
         // 参考 es6 filter语法
         return this.todoListData.filter(item => item.finish).length
-      },
-      ...mapState({
-        todoListData: state => state.note_module.todoListData,
-      })
+      }
     }
   }
 </script>

@@ -1,5 +1,5 @@
 
-import { CHANGE_FINISH_STATE, ADD_TODO, DELETE_TODO } from './types'
+import { CHANGE_FINISH_STATE, ADD_TODO, DELETE_TODO, EDIT_TODO } from './types'
 
 export default {
   // 修改任务完成状态
@@ -31,6 +31,24 @@ export default {
     }
     if (index !== -1) {
       delete todoListData.splice(index, 1)
+    }
+  },
+  // 修改任务
+  [EDIT_TODO](state, todo) {
+    console.log('todo', todo)
+    let todoListData = state.todoListData
+    let index = -1
+    for (let i = 0; i < todoListData.length; i++) {
+      if (todo.id === todoListData[i].id) {
+        index = i
+        break;
+      }
+    }
+    if (index > -1) {
+      todoListData[index] = {
+        ...todoListData[index],
+        ...todo
+      }
     }
   }
 }
