@@ -39,8 +39,9 @@
 * 组件传值（props）
 * 跨域问题解决方案
 * router（页面跳转动画等）
-* vuex（redux）基本用法封装与实现
-* 子父组件互调用(demo暂未涉及)
+* vuex基本用法封装与实现,全局store，修改主题等
+* vuex深入，模块store（module），完整记事本demo
+* 子父组件互调用
 * eslint配置（暂未配置）
 
 ### 参考文档
