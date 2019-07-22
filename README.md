@@ -210,3 +210,31 @@ export default {
 * 参考资料：[5分钟带你入门vuex（vue状态管理）](https://baijiahao.baidu.com/s?id=1618794879569468435&wfr=spider&for=pc)
 * 官方参考资料: [vuex](https://vuex.vuejs.org/zh/installation.html)
 * 如果想深入了解，请参考：[redux基本原理](https://www.redux.org.cn/)
+
+### 发布部署
+
+* [参考文档](https://zh.nuxtjs.org/guide/commands)
+* package.json配置
+
+```
+....
+
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start"
+  },
+
+...
+```
+* 可使用[pm2](https://github.com/Unitech/PM2/):  pm2是node进程管理工具,可以利用它来简化很多node应用管理的繁琐任务,如性能监控、自动重启、负载均衡等,而且使用非常简单。
+* 执行buil命令
+
+```
+ npm run build
+```
+* 执行启动服务命令
+
+```
+  npm run start
+```
