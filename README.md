@@ -31,7 +31,7 @@
 * vue学习整理
 * 未严格按照Vue[风格指南](https://cn.vuejs.org/v2/style-guide/)
 * 旨在学习与交流vue语法以及基本入门
-* 由于对css了解不深入，使用了flex-box布局，界面样式可忽略
+* 由于对css了解不深入，使用了FlexBox布局，界面样式可忽略
 
 ### 功能
 * 基于nuxt搭建项目
@@ -228,7 +228,7 @@ export default {
 ...
 ```
 
-* 执行buil命令
+* 执行build命令
 
 ```
  npm run build
