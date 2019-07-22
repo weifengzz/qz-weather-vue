@@ -127,6 +127,11 @@ export default {
       }
     }
   },
+  head() {
+    return {
+      title: '青州天气'
+    }
+  },
   // 引用组件
   components: {
     headerTop,

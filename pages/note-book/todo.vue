@@ -1,6 +1,7 @@
 <template>
   <div id="todo">
     <header-top :title="'Todo'"></header-top>
+    <!-- 主题按钮  -->
     <a @click="showModal" class="theme">Change theme</a>
     <div class="input-content">
       <label>title:</label>
@@ -141,6 +142,11 @@
           }
           this.$router.back('-1')
         }
+      }
+    },
+    head() {
+      return {
+        title: 'ToDo'
       }
     },
     components: {

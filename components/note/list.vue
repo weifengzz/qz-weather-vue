@@ -1,7 +1,7 @@
 <template>
   <div id="list">
     <div v-for="(val, key) in todoListData" :key="key" class="list-item">
-      <!-- 根据装填修改颜色 -->
+      <!-- 根据状态修改颜色 -->
       <div class="list-header" :style="{'background-color': val.finish ? 'yellowgreen' : 'sienna'}">
         <div class="list-header-left">
           <span class="title-text">{{val.title}} </span>

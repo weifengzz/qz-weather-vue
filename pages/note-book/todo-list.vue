@@ -40,6 +40,11 @@
       onAddButtonClick() {
         this.$router.push({path:'todo', query: { edit: false }})
       }
+    },
+    head() {
+      return {
+        title: 'ToDoList'
+      }
     }
   }
 </script>

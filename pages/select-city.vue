@@ -29,6 +29,11 @@
           this.$router.back(-1)
         }
       }
+    },
+    head() {
+      return {
+        title: '选择城市'
+      }
     }
   }
 </script>
