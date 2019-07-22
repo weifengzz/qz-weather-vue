@@ -3,20 +3,25 @@
     <header-top :title="'Todo'"></header-top>
     <!-- 主题按钮  -->
     <a @click="showModal" class="theme">Change theme</a>
+    <!-- 标题输入框 -->
     <div class="input-content">
       <label>title:</label>
       <input value="title" v-model="title" type="text" class="title-input" />
     </div>
+    <!-- 描述输入框 -->
     <div class="input-content">
       <label>desc:</label>
       <textarea value="desc" v-model="desc" class="desc-input" />
     </div>
+    <!-- 提交按钮 -->
     <div class="btn-content">
       <a @click="onSubmitClick" class="ok-btn submit-btn">OK</a>
     </div>
+    <!-- 公共组件模态框 -->
     <modal ref="modal">
       <!-- v-slot插槽 https://cn.vuejs.org/v2/guide/components-slots.html -->
       <template v-slot:content>
+        <!-- 模态框内容 -->
         <div class="modal-content">
           <div class="modal-header">
             <a @click="hideModal" class="close-text">close X</a>
@@ -56,8 +61,8 @@
   export default {
     data() {
       return {
-        selectIndex: -1,
-        colors: [
+        selectIndex: -1,  // 主题选择颜色index
+        colors: [         // 主题颜色
           'cadetblue',
           'chocolate',
           'aqua',
@@ -65,9 +70,9 @@
           'tomato',
           'slategray'
         ],
-        title: '',
-        desc: '',
-        isEdit: false
+        title: '',        // 标题
+        desc: '',         // 描述
+        isEdit: false     // 添加或修改判断
       }
     },
     computed: {

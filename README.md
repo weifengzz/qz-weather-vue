@@ -227,7 +227,7 @@ export default {
 
 ...
 ```
-* 可使用[pm2](https://github.com/Unitech/PM2/):  pm2是node进程管理工具,可以利用它来简化很多node应用管理的繁琐任务,如性能监控、自动重启、负载均衡等,而且使用非常简单。
+
 * 执行buil命令
 
 ```
@@ -238,3 +238,5 @@ export default {
 ```
   npm run start
 ```
+
+* 可使用[pm2](https://github.com/Unitech/PM2/):  pm2是node进程管理工具,可以利用它来简化很多node应用管理的繁琐任务,如性能监控、自动重启、负载均衡等,而且使用非常简单。

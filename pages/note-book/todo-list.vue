@@ -38,6 +38,7 @@
     },
     methods: {
       onAddButtonClick() {
+        // 跳转到todo界面
         this.$router.push({path:'todo', query: { edit: false }})
       }
     },
