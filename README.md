@@ -39,6 +39,7 @@
 * router（页面跳转动画等）
 * vuex基本用法封装与实现,全局store，修改主题等（暂未实现语言全球化）。
 * vuex深入，模块下store（module），经典的记事本(任务管理)demo
+* 支持vuex logger日志打印
 * 基本组件封装
 * 组件传值（props）
 * 子父组件互调用
