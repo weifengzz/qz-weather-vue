@@ -5,6 +5,7 @@ import mutations from './mutations'
 import actions from './actions'
 import state from './state'
 import noteModule from './note_module'
+import logger from './logger'
 
 Vue.use(Vuex)
 
@@ -33,7 +34,16 @@ const mudules = {
   noteModule
 }
 
+// 判断是否为debug模式
+const debug = process.env.NODE_ENV !== 'production';
+
+/**
+ * logger 日志管理
+ */
+const plugins = debug ? [logger] : []
+
 export {
+  plugins,
   state,
   getters,
   mutations,

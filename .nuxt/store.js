@@ -20,6 +20,7 @@ void (function updateModules() {
 
   resolveStoreModules(require('../store/actions.js'), 'actions.js')
   resolveStoreModules(require('../store/getters.js'), 'getters.js')
+  resolveStoreModules(require('../store/logger.js'), 'logger.js')
   resolveStoreModules(require('../store/mutations.js'), 'mutations.js')
   resolveStoreModules(require('../store/state.js'), 'state.js')
   resolveStoreModules(require('../store/types.js'), 'types.js')
@@ -38,6 +39,7 @@ void (function updateModules() {
       '../store/actions.js',
       '../store/getters.js',
       '../store/index.js',
+      '../store/logger.js',
       '../store/mutations.js',
       '../store/state.js',
       '../store/types.js',
