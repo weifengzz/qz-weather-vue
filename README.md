@@ -44,7 +44,7 @@
 * 组件传值（props）
 * 子父组件互调用
 * 封装模态框以及slot的使用
-* eslint配置（暂未配置）
+* eslint配置（有很多坑）
 
 ### 参考文档
 * [vue](https://cn.vuejs.org/v2/guide/)
@@ -78,6 +78,17 @@ or
 
 ```
     yarn
+```
+
+* 使用eslint后，vue-loader可能会报错，请使用yarn单独安装vue-loader, [查看issues](https://github.com/webpack-contrib/eslint-loader/issues/215)
+
+```
+yarn add vue-loader --dev
+```
+
+* yarn安装husky，husky可能不做检查，请使用npm安装
+```
+npm install husky --save-dev
 ```
 
 * 运行 
@@ -240,3 +251,51 @@ export default {
 ```
 
 * 可使用[pm2](https://github.com/Unitech/PM2/):  pm2是node进程管理工具,可以利用它来简化很多node应用管理的繁琐任务,如性能监控、自动重启、负载均衡等,而且使用非常简单。
+
+### eslint配置
+
+* 添加eslint依赖库
+
+```
+  "devDependencies": {
+    ...
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.2.3",
+    "husky": "^3.0.1",
+    "prettier-eslint-cli": "^5.0.0"
+    ...
+  }
+```
+
+* package.json配置eslint和husky
+
+```
+"scripts": {
+    ...
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+    ...
+  }
+```
+
+* 使用eslint后，vue-loader可能会报错，请使用yarn单独安装vue-loader, [查看issues](https://github.com/webpack-contrib/eslint-loader/issues/215)
+
+```
+yarn add vue-loader --dev
+```
+
+* yarn安装husky，husky可能不做检查，请使用npm安装
+```
+npm install husky --save-dev
+```
