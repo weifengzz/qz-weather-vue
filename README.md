@@ -351,7 +351,7 @@ module.exports = {
 "prettier/prettier": ["error", { "semi": false, "singleQuote": true }]
 ```
 
-* 使用 <img />这种闭合的标签的时候，会出现警告，自定义配置，消除警告
+* 使用“img，input等”这种闭合的标签的时候，会出现警告，自定义配置，消除警告
 
 ```
 "vue/html-self-closing": ["error", {
