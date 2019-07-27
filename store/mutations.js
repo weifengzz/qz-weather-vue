@@ -1,6 +1,6 @@
 /**
  * mutations
- * 
+ *
  * 修改state值，更新状态
  */
 

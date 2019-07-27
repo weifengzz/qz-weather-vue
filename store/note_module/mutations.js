@@ -1,4 +1,3 @@
-
 import { CHANGE_FINISH_STATE, ADD_TODO, DELETE_TODO, EDIT_TODO } from './types'
 
 export default {
@@ -15,7 +14,9 @@ export default {
     let todoListData = state.todoListData
     todoListData.push({
       ...todo,
-      id: todoListData.length ? todoListData[todoListData.length - 1].id + 1 : 1,
+      id: todoListData.length
+        ? todoListData[todoListData.length - 1].id + 1
+        : 1,
       finish: false
     })
   },
@@ -26,7 +27,7 @@ export default {
     for (let i = 0; i < todoListData.length; i++) {
       if (id === todoListData[i].id) {
         index = i
-        break;
+        break
       }
     }
     if (index !== -1) {
@@ -40,7 +41,7 @@ export default {
     for (let i = 0; i < todoListData.length; i++) {
       if (todo.id === todoListData[i].id) {
         index = i
-        break;
+        break
       }
     }
     if (index > -1) {

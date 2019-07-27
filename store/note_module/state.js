@@ -7,20 +7,20 @@ const state = () => {
     todoListData: [
       {
         id: 1, // id
-        title: "Hello World", // 标题
-        desc: "Learn how to progrom.", // 描述
+        title: 'Hello World', // 标题
+        desc: 'Learn how to progrom.', // 描述
         finish: false // 是否完成
       },
       {
         id: 2,
-        title: "Hello vue",
-        desc: "Learn how to build a vue application.",
+        title: 'Hello vue',
+        desc: 'Learn how to build a vue application.',
         finish: false // 是否完成
       },
       {
         id: 3,
-        title: "How Vuex",
-        desc: "Learn how to use Vuex in a vue application.",
+        title: 'How Vuex',
+        desc: 'Learn how to use Vuex in a vue application.',
         finish: true // 是否完成
       }
     ]

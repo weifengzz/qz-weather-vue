@@ -23,7 +23,7 @@ Vue.use(Vuex)
 
 /**
  * Module
- * 
+ *
  * 参考文档：https://vuex.vuejs.org/zh/guide/modules.html
  * 由于使用单一状态树，应用的所有状态会集中到一个比较大的对象。
  * 当应用变得非常复杂时，store 对象就有可能变得相当臃肿。
@@ -35,18 +35,11 @@ const mudules = {
 }
 
 // 判断是否为debug模式
-const debug = process.env.NODE_ENV !== 'production';
+const debug = process.env.NODE_ENV !== 'production'
 
 /**
  * logger 日志管理
  */
 const plugins = debug ? [logger] : []
 
-export {
-  plugins,
-  state,
-  getters,
-  mutations,
-  actions,
-  mudules
-}
+export { plugins, state, getters, mutations, actions, mudules }

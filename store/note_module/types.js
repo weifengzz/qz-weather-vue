@@ -11,9 +11,4 @@ const DELETE_TODO = 'deleteTodo'
 // 修改任务
 const EDIT_TODO = 'edit_todo'
 
-export {
-  CHANGE_FINISH_STATE,
-  ADD_TODO,
-  DELETE_TODO,
-  EDIT_TODO
-}
+export { CHANGE_FINISH_STATE, ADD_TODO, DELETE_TODO, EDIT_TODO }
