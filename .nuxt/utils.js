@@ -98,15 +98,15 @@ export function flatMapComponents(route, fn) {
   }))
 }
 
-export function resolveRouteComponents(route) {
+export function resolveRouteComponents(route, fn) {
   return Promise.all(
-    flatMapComponents(route, async (Component, _, match, key) => {
+    flatMapComponents(route, async (Component, instance, match, key) => {
       // If component is a function, resolve it
       if (typeof Component === 'function' && !Component.options) {
         Component = await Component()
       }
-      match.components[key] = sanitizeComponent(Component)
-      return match.components[key]
+      match.components[key] = Component = sanitizeComponent(Component)
+      return typeof fn === 'function' ? fn(Component, instance, match, key) : Component
     })
   )
 }
@@ -131,7 +131,7 @@ export async function setContext(app, context) {
   if (!app.context) {
     app.context = {
       isStatic: process.static,
-      isDev: true,
+      isDev: false,
       isHMR: false,
       app,
       store: app.store,
@@ -233,9 +233,6 @@ export function middlewareSeries(promises, appContext) {
 export function promisify(fn, context) {
   let promise
   if (fn.length === 2) {
-      console.warn('Callback-based asyncData, fetch or middleware calls are deprecated. ' +
-        'Please switch to promises or async/await syntax')
-
     // fn(context, callback)
     promise = new Promise((resolve) => {
       fn(context, function (err, data) {

@@ -2,6 +2,8 @@
  * mutations
  *
  * 修改state值，更新状态
+ *
+ * @format
  */
 
 import { CHANGE_CITY_NUMBER, CHANGE_APP_THEME } from './types'
@@ -14,5 +16,5 @@ export default {
   // 修改城市编码
   [CHANGE_CITY_NUMBER](state, selectedCity) {
     state.selectedCity = selectedCity
-  }
+  },
 }

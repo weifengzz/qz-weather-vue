@@ -1,3 +1,5 @@
+/** @format */
+
 import Vue from 'vue'
 import Vuex from 'vuex'
 import getters from './getters'
@@ -31,7 +33,7 @@ Vue.use(Vuex)
  * 每个模块拥有自己的 state、mutation、action、getter、甚至是嵌套子模块——从上至下进行同样方式的分割
  */
 const mudules = {
-  noteModule
+  noteModule,
 }
 
 // 判断是否为debug模式

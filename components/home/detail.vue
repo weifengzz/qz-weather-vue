@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <template>
   <div id="q-detail">
     <div class="q-detail-left">
@@ -13,7 +15,8 @@
         </p>
         <!-- 使用计算属性获取发布时间 -->
         <p class="q-release-time-text">
-          {{ releaseTime(detaildata.time) }} 发布
+          {{ releaseTime(detaildata.time) }}
+          发布
         </p>
       </div>
       <p class="q-unit-text">
@@ -32,8 +35,8 @@ export default {
     detaildata: {
       type: Object,
       required: true,
-      default: () => {}
-    }
+      default: () => {},
+    },
   },
   computed: {
     // 使用计算属性，获取发布时间
@@ -41,7 +44,7 @@ export default {
       return time => {
         return time.split(' ')[1]
       }
-    }
-  }
+    },
+  },
 }
 </script>

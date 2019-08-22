@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <template>
   <div id="todo-list">
     <header-top :title="'TodoList'" />
@@ -29,24 +31,24 @@ export default {
     headerTop,
     report,
     list,
-    addButton
+    addButton,
   },
   computed: {
     ...mapState({
-      todoListData: state => state.noteModule.todoListData
-    })
+      todoListData: state => state.noteModule.todoListData,
+    }),
   },
   methods: {
     onAddButtonClick() {
       // 跳转到todo界面
       this.$router.push({ path: 'todo', query: { edit: false } })
-    }
+    },
   },
   head() {
     return {
-      title: 'ToDoList'
+      title: 'ToDoList',
     }
-  }
+  },
 }
 </script>
 

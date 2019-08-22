@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <template>
   <div id="q-list">
     <!-- 使用for循环的时候需要添加:key="key" -->
@@ -23,15 +25,15 @@ import spliteLine from '../common/SpliteLine' // 导入分割线
 
 export default {
   components: {
-    spliteLine
+    spliteLine,
   },
   // 获取props
   props: {
     listdata: {
       type: Array,
       required: true,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
   computed: {
     // 列表日期格式化
@@ -39,7 +41,7 @@ export default {
       return ymd => {
         return `${ymd.split('-')[1]}-${ymd.split('-')[2]}`
       }
-    }
-  }
+    },
+  },
 }
 </script>

@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <template>
   <div class="q-header">
     <a class="q-header-text">{{ selectedCity.name }}</a>
@@ -28,13 +30,13 @@ export default {
   data() {
     return {
       date: `${moment().format('MM')}月${moment().format('DD')}日`, // moment 获取月日
-      week: moment().weekday() // moment获取星期
+      week: moment().weekday(), // moment获取星期
     }
   },
   computed: {
     ...mapState({
-      selectedCity: state => state.selectedCity
-    })
-  }
+      selectedCity: state => state.selectedCity,
+    }),
+  },
 }
 </script>

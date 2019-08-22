@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <template>
   <div id="content" :style="{ 'background-color': theme.color }">
     <h3 class="title-text">
@@ -15,14 +17,14 @@ export default {
     title: {
       type: String,
       required: true,
-      default: ''
-    }
+      default: '',
+    },
   },
   computed: {
     ...mapState({
-      theme: state => state.theme
-    })
-  }
+      theme: state => state.theme,
+    }),
+  },
 }
 </script>
 

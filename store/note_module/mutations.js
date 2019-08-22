@@ -1,3 +1,5 @@
+/** @format */
+
 import { CHANGE_FINISH_STATE, ADD_TODO, DELETE_TODO, EDIT_TODO } from './types'
 
 export default {
@@ -14,10 +16,8 @@ export default {
     let todoListData = state.todoListData
     todoListData.push({
       ...todo,
-      id: todoListData.length
-        ? todoListData[todoListData.length - 1].id + 1
-        : 1,
-      finish: false
+      id: todoListData.length ? todoListData[todoListData.length - 1].id + 1 : 1,
+      finish: false,
     })
   },
   // 添加任务
@@ -48,5 +48,5 @@ export default {
       todoListData[index].desc = todo.desc
       todoListData[index].title = todo.title
     }
-  }
+  },
 }

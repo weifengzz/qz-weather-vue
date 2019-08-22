@@ -1,22 +1,16 @@
+<!-- @format -->
+
 <template>
   <!-- 正在加载 -->
   <!-- 动态绑定class写法 :class="{'bor':clicked==index}" -->
   <!-- 动态绑定style写法 :class="{'bor':clicked==index}" -->
-  <div
-    v-if="loading"
-    id="q-content"
-    :style="{ 'background-color': theme.color }"
-  >
+  <div v-if="loading" id="q-content" :style="{ 'background-color': theme.color }">
     <div class="q-loading">
       <span class="q-loading-error-text">loading...</span>
     </div>
   </div>
   <!-- 加载失败 -->
-  <div
-    v-else-if="fail"
-    id="q-content"
-    :style="{ 'background-color': theme.color }"
-  >
+  <div v-else-if="fail" id="q-content" :style="{ 'background-color': theme.color }">
     <div class="q-loading">
       <span class="q-loading-error-text">网络异常，</span>
       <a class="q-loading-error-text">点击重新加载</a>
@@ -48,13 +42,13 @@ export default {
   components: {
     headerTop,
     detail,
-    list
+    list,
   },
   data() {
     return {
       loading: true, // 正在加载
       fail: false, // 失败
-      data: null // 界面数据
+      data: null, // 界面数据
     }
   },
   computed: {
@@ -75,8 +69,8 @@ export default {
     },
     ...mapState({
       selectedCity: state => state.selectedCity,
-      theme: state => state.theme
-    })
+      theme: state => state.theme,
+    }),
   },
   // async asyncData({ params }) {
   //   // 服务端数据请求
@@ -139,13 +133,13 @@ export default {
         this.data = null
         this.loading = false
       }
-    }
+    },
   },
   head() {
     return {
-      title: '青州天气'
+      title: '青州天气',
     }
-  }
+  },
 }
 </script>
 

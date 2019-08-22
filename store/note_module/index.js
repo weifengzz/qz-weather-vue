@@ -1,5 +1,7 @@
 /**
  * 导出module
+ *
+ * @format
  */
 
 import state from './state'
@@ -9,5 +11,5 @@ import mutations from './mutations'
 export default {
   state,
   actions,
-  mutations
+  mutations,
 }

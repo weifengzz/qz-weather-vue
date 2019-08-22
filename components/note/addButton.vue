@@ -1,9 +1,7 @@
+<!-- @format -->
+
 <template>
-  <a
-    id="add-button"
-    :style="{ 'background-color': theme.color }"
-    @click="onAddClick"
-  >
+  <a id="add-button" :style="{ 'background-color': theme.color }" @click="onAddClick">
     +
   </a>
 </template>
@@ -14,14 +12,14 @@ import { mapState } from 'vuex'
 export default {
   computed: {
     ...mapState({
-      theme: state => state.theme
-    })
+      theme: state => state.theme,
+    }),
   },
   methods: {
     onAddClick() {
       this.$emit('addButtonClick')
-    }
-  }
+    },
+  },
 }
 </script>
 

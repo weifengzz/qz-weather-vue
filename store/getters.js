@@ -7,9 +7,12 @@
  * 这里我们可以通过定义vuex的Getter来获取，
  * Getters 可以用于监听、state中的值的变化，
  * 返回计算后的结果，
+ *
+ * @format
  */
+
 export default {
   getCityNumber: state => {
     return state.selectedCity
-  }
+  },
 }

@@ -1,6 +1,9 @@
 /**
  * redux插件
+ *
+ * @format
  */
+
 import createLogger from 'vuex/dist/logger'
 
 const logger = createLogger({
@@ -20,7 +23,7 @@ const logger = createLogger({
     // 我们可以按任意方式格式化
     return mutation.type
   },
-  logger: console // 自定义 console 实现，默认为 `console`
+  logger: console, // 自定义 console 实现，默认为 `console`
 })
 
 export default logger

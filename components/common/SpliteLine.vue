@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <template>
   <div id="q-splite-line" />
 </template>

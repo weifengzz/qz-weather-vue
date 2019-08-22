@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <template>
   <!-- 展示模态框 -->
   <div v-if="show" id="modal">
@@ -16,7 +18,7 @@
 export default {
   data() {
     return {
-      show: false
+      show: false,
     }
   },
   methods: {
@@ -24,8 +26,8 @@ export default {
       this.show = show
     },
     d1() {},
-    d2() {}
-  }
+    d2() {},
+  },
 }
 </script>
 

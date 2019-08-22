@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Meta from 'vue-meta'
+import ClientOnly from 'vue-client-only'
+import NoSsr from 'vue-no-ssr'
 import { createRouter } from './router.js'
-import NoSsr from './components/no-ssr.js'
 import NuxtChild from './components/nuxt-child.js'
 import NuxtError from './components/nuxt-error.vue'
 import Nuxt from './components/nuxt.js'
@@ -11,10 +12,21 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_axios_5c39fbbd from 'nuxt_plugin_axios_5c39fbbd' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_axios_8df7bbda from 'nuxt_plugin_axios_8df7bbda' // Source: .\\axios.js (mode: 'all')
 
-// Component: <NoSsr>
-Vue.component(NoSsr.name, NoSsr)
+// Component: <ClientOnly>
+Vue.component(ClientOnly.name, ClientOnly)
+// TODO: Remove in Nuxt 3: <NoSsr>
+Vue.component(NoSsr.name, {
+  ...NoSsr,
+  render(h, ctx) {
+    if (process.client && !NoSsr._warned) {
+      NoSsr._warned = true
+      console.warn(`<no-ssr> has been deprecated and will be removed in Nuxt 3, please use <client-only> instead`)
+    }
+    return NoSsr.render(h, ctx)
+  }
+})
 
 // Component: <NuxtChild>
 Vue.component(NuxtChild.name, NuxtChild)
@@ -151,8 +163,8 @@ async function createApp(ssrContext) {
 
   // Plugin execution
 
-  if (typeof nuxt_plugin_axios_5c39fbbd === 'function') {
-    await nuxt_plugin_axios_5c39fbbd(app.context, inject)
+  if (typeof nuxt_plugin_axios_8df7bbda === 'function') {
+    await nuxt_plugin_axios_8df7bbda(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first

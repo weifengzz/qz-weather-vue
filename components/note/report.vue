@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <template>
   <div id="report">
     <p class="reprot-text">
@@ -13,7 +15,7 @@ import { mapState } from 'vuex'
 export default {
   computed: {
     ...mapState({
-      todoListData: state => state.note_module.todoListData
+      todoListData: state => state.note_module.todoListData,
     }),
     // 获取完成数量
     getTotalTask() {
@@ -23,8 +25,8 @@ export default {
     getFinished() {
       // 参考 es6 filter语法
       return this.todoListData.filter(item => item.finish).length
-    }
-  }
+    },
+  },
 }
 </script>
 

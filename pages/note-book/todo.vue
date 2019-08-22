@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <template>
   <div id="todo">
     <header-top :title="'Todo'" />
@@ -34,7 +36,7 @@
                   'background-color': val,
                   border: selectIndex === key ? '2px solid gray' : '0px',
                   height: selectIndex === key ? '26px' : '30px',
-                  width: selectIndex === key ? '76px' : '80px'
+                  width: selectIndex === key ? '76px' : '80px',
                 }"
                 @click="onSelect(key)"
               />
@@ -61,7 +63,7 @@ import { mapActions, mapState } from 'vuex'
 export default {
   components: {
     headerTop,
-    modal
+    modal,
   },
   data() {
     return {
@@ -73,17 +75,17 @@ export default {
         'aqua',
         'yellowgreen',
         'tomato',
-        'slategray'
+        'slategray',
       ],
       title: '', // 标题
       desc: '', // 描述
-      isEdit: false // 添加或修改判断
+      isEdit: false, // 添加或修改判断
     }
   },
   computed: {
     ...mapState('note_module', {
-      todoListData: state => state.todoListData
-    })
+      todoListData: state => state.todoListData,
+    }),
   },
   mounted() {
     if (this.$route.query && this.$route.query.edit) {
@@ -116,7 +118,7 @@ export default {
       } else {
         let selectColor = this.colors[this.selectIndex]
         this[CHANGE_APP_THEME]({
-          color: selectColor
+          color: selectColor,
         })
         this.hideModal()
       }
@@ -137,23 +139,23 @@ export default {
           this[EDIT_TODO]({
             id: this.$route.query.id,
             title: this.title,
-            desc: this.desc
+            desc: this.desc,
           })
         } else {
           this[ADD_TODO]({
             title: this.title,
-            desc: this.desc
+            desc: this.desc,
           })
         }
         this.$router.back('-1')
       }
-    }
+    },
   },
   head() {
     return {
-      title: 'ToDo'
+      title: 'ToDo',
     }
-  }
+  },
 }
 </script>
 

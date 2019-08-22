@@ -1,3 +1,5 @@
+/** @format */
+
 import { CHANGE_FINISH_STATE, ADD_TODO, DELETE_TODO, EDIT_TODO } from './types'
 
 export default {
@@ -12,5 +14,5 @@ export default {
   },
   [EDIT_TODO](context, todo) {
     context.commit(EDIT_TODO, todo)
-  }
+  },
 }

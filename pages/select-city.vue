@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <template>
   <ul>
     <li>
@@ -28,12 +30,12 @@ export default {
         // 返回上一级
         this.$router.back(-1)
       }
-    }
+    },
   },
   head() {
     return {
-      title: '选择城市'
+      title: '选择城市',
     }
-  }
+  },
 }
 </script>
